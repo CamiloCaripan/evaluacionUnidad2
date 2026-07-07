@@ -50,7 +50,17 @@ formulario.addEventListener('submit', function(evento) {
         window.location.href = "dashboard.html"; 
         return;
     }
-
+    if (usuarioRegistrado.correo === "" && usuarioRegistrado.contraseña === "") {
+        mostrarAlertaBootstrap("No hay ningún usuario registrado en el sistema. Por favor, ingresa tus datos una primera vez marcando la casilla 'Recordarme'.");
+    } 
+    else if (correoIngresado === usuarioRegistrado.correo && contraseñaIngresada === usuarioRegistrado.contraseña) {
+        console.log('¡Inicio de sesión exitoso con datos persistentes!');
+        window.location.href = "dashboard.html"; 
+    } 
+    else {
+        mostrarAlertaBootstrap("El correo electrónico o la contraseña son incorrectos.");
+    }
+});
 
 function mostrarAlertaBootstrap(mensaje) {
     const contenedorAlerta = document.createElement('div'); 
