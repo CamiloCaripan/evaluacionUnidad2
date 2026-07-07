@@ -18,6 +18,16 @@ botonContador.addEventListener('click', function() {
     
     }
 
+    if (contador <= 10 && contador >= 6) {
+        botonContador.className = "btn btn-warning";
+    } 
+    else if (contador <= 5 && contador >= 0) {
+        botonContador.className = "btn btn-danger";
+    } 
+    else {
+        botonContador.className = "btn btn-primary";
+    }
+
 
     botonContador.textContent = `Presioname ${contador}`;
     footerContador.textContent = contador;
