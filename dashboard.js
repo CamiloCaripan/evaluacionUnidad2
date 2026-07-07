@@ -15,6 +15,27 @@ botonContador.addEventListener('click', function() {
         contador = 15;
 
 
+        if (cardTitulo.textContent === "Anthropic") {
+            cardTitulo.textContent = "Google Gemini";
+            cardTexto.textContent = "Creadores de los modelos Gemini Pro y Ultra";
+            cardImagen.src = "imagenes/google-gemini.svg";     
+        } 
+        else if (cardTitulo.textContent === "Google Gemini") {
+            cardTitulo.textContent = "OpenAI";
+            cardTexto.textContent = "Creadores de Chatgpt";
+            cardImagen.src = "imagenes/openai.svg";
+        } 
+        else if (cardTitulo.textContent === "OpenAI") {
+            cardTitulo.textContent = "Grok";
+            cardTexto.textContent = "Creado por Elon Musk";
+            cardImagen.src = "imagenes/grok.svg";
+        } 
+        else {
+            cardTitulo.textContent = "Anthropic";
+            cardTexto.textContent = "Creadores de los modelos Claude";
+            cardImagen.src = "imagenes/anthropic.svg";
+        }
+
     
     }
 
